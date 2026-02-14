@@ -1,0 +1,1 @@
+25-10-15_g431keu6_control_program\startup_stm32g4a1xx.o: startup_stm32g4a1xx.s
