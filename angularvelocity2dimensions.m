@@ -1,4 +1,4 @@
-%% 1. 已知参数（固定圆半径l可按需调整）
+%% 1. 已知参数（主轴高度a的值可以调整）
 clear; clc; close all;  % 清理工作区，避免旧变量干扰
 a = 8;    
 b = 6;    
@@ -94,7 +94,7 @@ for i = 1:n_frame
         end
     end
 
-    % ================== 【已固定启用选项2】单交点选取：始终取x坐标最大的交点 ==================
+    % ================== 单交点选取：始终取x坐标最大的交点 ==================
     if ~isempty(real_x)
         % 核心逻辑：取x坐标最大的交点，固定观察圆右侧区域
         [~, select_idx] = max(real_x);  
@@ -191,4 +191,5 @@ grid on;
 fprintf('计算完成！已固定选取【x坐标最大的交点】\n');
 fprintf('最大角加速度：%.4f rad/s²\n', max(alpha, [], 'omitnan'));
 fprintf('最小角加速度：%.4f rad/s²\n', min(alpha, [], 'omitnan'));
+
 fprintf('平均角加速度：%.4f rad/s²\n', mean(alpha, 'omitnan'));
